@@ -1,0 +1,341 @@
+baseURL: "https://davidfries.dev"
+languageCode: "en-us"
+title: "David Fries"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Menus:
+#   main:
+#     - identifier: blog
+#       name: Blog
+#       title: Blog posts
+#       url: /blogs
+#       weight: 1
+#     - identifier: gallery
+#       name: Gallery
+#       title: Blog posts
+#       url: /gallery
+#       weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "David Fries - DevOps Engineer"
+  description: Learn more about David Fries, a DevOps Engineer with a passion for automation and cloud computing.
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/images/favicon-32x32.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+  
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+  #   darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "David Fries" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hey! My name is"
+    title: "David Fries"
+    subtitle: "I like to engineer solutions to complex problems"
+    content: "A career spanning a decade of systems administration, software development, and cloud engineering"
+    image: /images/hero.JPG
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: true
+      name: "Resume"
+      url: "resume.pdf"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/davidfries
+        
+      # customIcons:
+      #   - icon: /fav.png
+      #     url: "https://example.com"
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.jpg"
+    content: |-
+      My name is David Fries and I go by DJ. I'm currently living in the beautiful state of Colorado! I am extremely passionate about all things technology, which includes: cloud engineering (GCP, AWS, DigitalOcean, and Azure, software development (Python, TypeScript, and Go), and Kuberenetes (bare-metal and cloud provider maanged).
+      
+
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "TypeScript"
+        - "Python"
+        - "Postgresql"
+        - "React"
+        - "Node"
+        - "Express (ExpressZodAPI Library)"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Senior Systems Engineer"
+        company: "The Home Depot (Contract)"
+        companyUrl: "https://thehomedepot.com"
+        date: "Nov 2023 - Jan 2024"
+        content: |
+          Re-factored Terraform modules (consolidation, grouped repos).
+          Helped support a distributed system handling ~10 billion requests a month (99.99995% SLA)
+          Worked with K8s, Envoy, Grafana (OSS and Cloud), Prometheus, and GCP.
+          Developed custom Python scripts and Github Actions for validating, promoting, and deploying Grafana dashboards based on dev, non-prod, or prod lifecycles. 
+          Worked with fellow engineers to troubleshoot a mix of Systemd, Flatcar Linux, FRR, and GoWatchdog.
+
+      - job: "DevOps Engineer"
+        company: "Stateless"
+        companyUrl: "https://stateless.net"
+        date: "Jul 2022 - Oct 2023"
+        info:
+          enable: true
+        content: |
+          Heavily worked with Pulumi, Typescript, and all major cloud providers (Azure, GCP, and AWS).
+          With Pulumi Infrastructure as Code, I worked on a custom deployment platform for our services, writing dynamic resource providers for bespoke APIs, and creating many custom resource components for various pieces of our infrastructure.
+          Helped maintain a custom fork of the Megaport Terraform Module
+          Helped create novel software defined networking products centered around cloud networking automation and datacenter networking/connectivity.
+          Worked on implementing our RESTAPI for our SaaS offering, all written in Typescript, Express (Zodios), and EdgeDB. The API client for the frontend team to use was then built and deployed with Gitlab CI/CD. 
+          Created various complex Gitlab CI/CD pipelines for deploying software, building docker images, or creating our main product stack.
+          Implemented an observability stack of Grafana, Thanos, and Loki for processing our application logs/distributed system performance 
+          Maintained software deployments for our SaaS offering which ran on a cloud provider’s respective Kubernetes engine.
+          Helped troubleshoot and maintain high-performance bare metal Kubernetes clusters which ran our custom software defined networking solution; this included white-box Mellanox (Nvidia) switches, containerized FRR, and a lot of BGP config templating.
+
+      - job: "Site Reliability Engineer"
+        company: "Blue Sentry Cloud"
+        companyUrl: "https://bluesentry.cloud"
+        date: "Nov 2021 - Jul 2022"
+        content: |
+          Worked with remote team providing incident response, service request resolution, and cloud-transformation projects for clients.
+          Provided 15-minute SLA response when on-call.
+          Used Terraform heavily when creating/modifying client infrastructure.
+          Assisted with ad-hoc client projects, ranging from automation tasks and documentation to architecture recommendations and security best-practices. 
+          Used Agile methodology when working with clients. 
+          Maintained client’s Kubernetes infrastructure running on bare-metal and EKS. 
+          Hands-on with the following AWS services: EC2, RDS, EKS, S3, Lambda, ASGs, LBs, QuickSight, IAM, CloudFront, Route53, VPC Peering, and Step Functions.
+
+      - job: "Cloud Network Administrator"
+        company: "US Greenfiber"
+        companyUrl: "https://greenfiber.com"
+        date: "May 2015 - Nov 2021"
+        content: |
+          Software Development:
+          Used Python to create a custom integration between our accounting software and a critical SaaS.
+          CI/CD pipeline built with Gitlab to deploy our microservices to Kubernetes. 
+          Created an external API to synchronize data from a SaaS to our accounting software via SQL and custom modules.
+          Implemented custom report dashboards with Python(Flask), Vue.js, and SQL.
+          Automated various IT tasks such as employee on-boarding/off-boarding, paperless accounting batches audits with either PowerShell or Python depending on the required task.
+          
+          Systems Administration:
+          Windows Server 2008 R2, 2016, 2019
+          MSSQL 2008-2016
+          Docker, Kubernetes, Ubuntu Server
+          Managed/organized a 20+ year old Active Directory environment.
+          Citrix Cloud platform, Citrix XenApp 7.x
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "B.S. Computer Science"
+        school:
+          name: "University of North Carolina at Charlotte"
+        date: "Dec 2020"
+        content: "Cybersecurity concentration"
+
+      - title: "Associate of Science"
+        school:
+          name: "Central Piedmont Community College"
+        date: "May 2017"
+        content: "Software, Systems, Networking"
+
+      - title: "Associate of Arts"
+        school:
+          name: "Central Piedmont Community College"
+
+  # Achievements
+  achievements:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: Eagle Scout, Boy Scouts of America
+        content: "Awarded Eagle Scout in 2012. Gold, Silver, and Bronze Palms awarded in 2013-2015."
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: BillTrak
+        content: A side project to help me keep track of my bills and subscriptions.
+        # image: /images/projects/profile.png
+        featured:
+          name: BillTrak Application
+          link: https://billtrak.io
+        badges:
+          - "TypeScript"
+          - "React"
+          - "Node"
+        # links:
+        #   - icon: fa fa-envelope
+        #     url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+        #   - icon: fab fa-github
+        #     url: https://github.com/gurusabarish/hugo-profile
+        #   - icon: fab fa-twitter
+        #     url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: "Drop me a line if you'd like to chat!"
+    email: dfries4+web@gmail.com
+    btnName: Mail me
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    # recentPosts:
+    #   path: "blogs"
+    #   count: 3
+    #   title: Recent Posts
+    #   enable: true
+    #   disableFeaturedImage: false
+    socialNetworks:
+      github: https://github.com/davidfries
+      linkedin: https://www.linkedin.com/in/david-fries-00520262/
+      # twitter: https://twitter.com
+      # instagram: https://instagram.com
+      # facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
