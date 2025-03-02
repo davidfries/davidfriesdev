@@ -12,7 +12,8 @@ outputs:
     - "HTML"
     - "RSS"
 
-Paginate: 3
+pagination:
+  pagerSize: 3
 enableRobotsTXT: true
 # disqusShortname: your-disqus-shortname
 # googleAnalytics: G-MEASUREMENT_ID
@@ -176,6 +177,18 @@ params:
     enable: true
     # title: "Custom Name"
     items:
+      - job: "Senior DevOps Engineer"
+        company: "MyRadar"
+        companyUrl: "https://myradar.com"
+        date: "February 2024 - Present"
+        content: |
+          Transitioned enterprise sales team from bare metal deployments to cloud native infrastructure.
+          Used Pulumi as the Infrastructure as Code tool of choice.
+          Heavily used AWS ECS Fargate/EC2 deployments for I/O heavy APIs.
+          Developed backend APIs for multiple services which included radar imaging, weather model download/analysis, and an entire webhook platform used by Fortune 500 enterprises.
+          Implemented visualization/alerting across all services with Grafana Cloud, Loki, AWS Cloudwatch, and Prometheus.
+          Created GHA pipelines for image creation and deployment.
+          Streamlined developer deployments by leveraging Pulumi’s automation APIs to create a self-service deployment platform.
       - job: "Senior Systems Engineer"
         company: "The Home Depot (Contract)"
         companyUrl: "https://thehomedepot.com"
